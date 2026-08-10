@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Privacy Policy — Teams Digest for Jira</title>
+<style>
+  body { font-family: -apple-system, Segoe UI, Roboto, Arial, sans-serif; max-width: 760px; margin: 60px auto; padding: 0 20px; color: #172B4D; line-height: 1.65; }
+  h1 { font-size: 26px; text-align: center; margin-bottom: 4px; }
+  .updated { text-align: center; color: #6B778C; font-style: italic; margin-bottom: 40px; }
+  h2 { font-size: 20px; margin-top: 36px; color: #0052CC; }
+  h3 { font-size: 16px; margin-top: 24px; }
+  ul { padding-left: 24px; }
+  .note { color: #6B778C; font-size: 14px; margin-top: 50px; border-top: 1px solid #DFE1E6; padding-top: 16px; }
+  a { color: #0052CC; }
+  .todo { background: #FFF0B3; padding: 1px 4px; border-radius: 3px; }
+</style>
+</head>
+<body>
+
+<h1>Privacy Policy — Teams Digest for Jira</h1>
+<p class="updated">Last updated: <span class="todo">10/08/2026</span></p>
+
+<h2>1. Introduction</h2>
+<p>This Privacy Policy explains how "Teams Digest for Jira" (the "App"), provided by <span class="todo">Teams Digest for Jira</span> ("we", "us", "our"), handles information when installed on your Atlassian Jira Cloud site. The App sends scheduled summaries of Jira issue data to Microsoft Teams channels, based on configuration you provide.</p>
+<p>By installing or using the App, you agree to the practices described in this policy. If you do not agree, please do not install or use the App.</p>
+
+<h2>2. Information We Collect</h2>
+<h3>2.1 Configuration data you provide</h3>
+<p>When you set up a digest, you provide the following information, which is stored within Atlassian's Forge platform storage, isolated to your own Jira site installation:</p>
+<ul>
+  <li>Digest name and optional intro message</li>
+  <li>JQL (Jira Query Language) query text</li>
+  <li>Microsoft Teams Workflow webhook URL</li>
+  <li>Schedule settings: frequency, send windows, days of week, and time zone</li>
+  <li>Display preferences: result limit, sort order, header icon</li>
+</ul>
+<h3>2.2 Jira issue data</h3>
+<p>At each scheduled send time, the App queries your Jira site (using the JQL you configured) to retrieve issue fields (key, summary, status, priority, assignee, and creation date) needed to build the Teams message. This data is retrieved, formatted, and transmitted to the Teams webhook URL you configured — it is not separately stored or retained by the App beyond the moment of that transmission.</p>
+<h3>2.3 Automatically collected technical data</h3>
+<p>Atlassian's Forge platform may collect standard operational logs and, if you as the site administrator have enabled analytics/log sharing in your Atlassian app management settings, may share limited diagnostic information with us to help identify and fix issues. You can review and control these settings from your site's "Connected apps" administration page at any time.</p>
+
+<h2>3. How We Use Information</h2>
+<p>Configuration data is used exclusively to operate the App's core function: running your scheduled Jira queries and delivering formatted summaries to the Microsoft Teams destination you specify. We do not use your data for advertising, do not sell it, and do not use it to train any external models.</p>
+
+<h2>4. Third-Party Sharing</h2>
+<p>The App transmits data to Microsoft Teams via the Workflow webhook URL that you, the administrator, explicitly configure. This transmission is a function you request, not a sharing arrangement initiated by us. We do not otherwise share your data with third parties, except where required by law.</p>
+
+<h2>5. Data Storage and Retention</h2>
+<p>All configuration data is stored using Atlassian Forge's built-in storage service, hosted within Atlassian's infrastructure under Atlassian's own data residency and security commitments. We do not operate any separate servers or databases outside of the Forge platform.</p>
+<p>Configuration data is retained for as long as the App remains installed on your site. When you uninstall the App, Forge automatically deletes all associated stored data.</p>
+
+<h2>6. Your Rights</h2>
+<p>Depending on your jurisdiction, you may have rights to access, correct, or request deletion of data associated with your installation. Since all configuration data lives within your own Jira site's App storage, site administrators can delete individual digests at any time from within the App, or remove all data at once by uninstalling the App. For further requests, contact us using the details below.</p>
+
+<h2>7. Children's Privacy</h2>
+<p>The App is intended for use by business administrators configuring workplace notifications and is not directed at children. We do not knowingly collect data from children.</p>
+
+<h2>8. Changes to This Policy</h2>
+<p>We may update this Privacy Policy from time to time. Material changes will be reflected by updating the "Last updated" date above. Continued use of the App after changes constitutes acceptance of the revised policy.</p>
+
+<h2>9. Contact Us</h2>
+<p>For questions about this Privacy Policy or your data, contact us at: <a href="mailto:soporte@teamsdigestforjira.com">soporte@teamsdigestforjira.com</a>.</p>
+
+<p><a href="index.html">← Back</a></p>
+
+</body>
+</html>
