@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Documentation — Teams Digest for Jira</title>
+<style>
+  body { font-family: -apple-system, Segoe UI, Roboto, Arial, sans-serif; max-width: 760px; margin: 60px auto; padding: 0 20px; color: #172B4D; line-height: 1.65; }
+  h1 { font-size: 26px; text-align: center; margin-bottom: 30px; }
+  h2 { font-size: 20px; margin-top: 36px; color: #0052CC; }
+  h3 { font-size: 16px; margin-top: 22px; }
+  ul, ol { padding-left: 24px; }
+  code { background: #F4F5F7; padding: 2px 6px; border-radius: 3px; font-size: 90%; }
+  a { color: #0052CC; }
+  .tip { background: #E3FCEF; border-left: 4px solid #00875A; padding: 10px 16px; margin: 16px 0; }
+  .warn { background: #FFF0B3; border-left: 4px solid #FF8B00; padding: 10px 16px; margin: 16px 0; }
+</style>
+</head>
+<body>
+
+<h1>📖 Teams Digest for Jira — Documentation</h1>
+
+<h2>What it does</h2>
+<p>Teams Digest for Jira sends scheduled summaries of Jira issues to a Microsoft Teams channel. You define a JQL query, a schedule, and a destination — the app takes care of the rest.</p>
+
+<h2>1. Connect a Microsoft Teams channel</h2>
+<p>Before creating a digest, you need a Workflow URL from the Teams channel where you want to receive it.</p>
+<ol>
+  <li>Open the channel in Microsoft Teams where you want to receive digests.</li>
+  <li>Click the three dots (···) next to the channel name and select <strong>Workflows</strong>.</li>
+  <li>Search for and select the template <strong>"Post to a channel when a webhook request is received."</strong></li>
+  <li>Give the flow a recognizable name, e.g. <code>Jira Teams Digest</code>.</li>
+  <li>Confirm the destination channel and authenticate with your Microsoft 365 account.</li>
+  <li>Copy the URL Microsoft gives you (starts with <code>https://prod-...logic.azure.com/...</code> or a similar Power Automate domain).</li>
+</ol>
+<div class="warn">This URL acts like a password — anyone who has it can post messages to your channel. Don't share it or commit it to a public repository.</div>
+
+<h2>2. Create your first digest</h2>
+<ol>
+  <li>In Jira, go to <strong>Settings → Apps → Teams Digest for Jira</strong>.</li>
+  <li>Fill in a name, your JQL query, and paste the Teams Workflow URL from step 1.</li>
+  <li>Use <strong>"Test JQL"</strong> to confirm your query returns the results you expect before saving.</li>
+  <li>Choose a frequency (Daily or Weekly), your time zone, and one or more send windows.</li>
+  <li>Save. Your digest is now active.</li>
+</ol>
+
+<h2>3. Understanding send windows</h2>
+<p>Each hour you select is an approximate delivery window, not an exact minute. This is a platform limitation of Atlassian Forge's scheduled triggers (they distribute execution across installations to balance load), not something specific to this app — it applies to all Forge apps that run on a schedule.</p>
+
+<h2>4. Time zones</h2>
+<p>Each digest has its own time zone, detected automatically from your browser but fully editable — useful if you're configuring a digest for another office or region. All send windows and days of the week are interpreted in that digest's time zone, not a fixed server clock.</p>
+
+<h2>5. Free vs. Pro plan</h2>
+<ul>
+  <li><strong>Free:</strong> 1 active digest per installation.</li>
+  <li><strong>Pro:</strong> unlimited active digests.</li>
+</ul>
+<div class="tip">If your Pro subscription lapses, the system automatically pauses extra digests down to 1 (keeping the oldest one active) and reactivates them automatically if you resubscribe — nothing is deleted.</div>
+
+<h2>6. Managing digests</h2>
+<p>From the configuration screen you can edit, pause/activate, delete, or manually send a test for any digest at any time.</p>
+
+<h2>Need help?</h2>
+<p>Contact <a href="mailto:support@teamsdigestforjira.com">support@teamsdigestforjira.com</a>. See also our <a href="sla.html">Support &amp; SLA Statement</a>.</p>
+
+<p><a href="index.html">← Back</a></p>
+
+</body>
+</html>
