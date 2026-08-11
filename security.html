@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Security Policy — Teams Digest for Jira</title>
+<style>
+  body { font-family: -apple-system, Segoe UI, Roboto, Arial, sans-serif; max-width: 760px; margin: 60px auto; padding: 0 20px; color: #172B4D; line-height: 1.65; }
+  h1 { font-size: 26px; text-align: center; margin-bottom: 4px; }
+  .updated { text-align: center; color: #6B778C; font-style: italic; margin-bottom: 40px; }
+  h2 { font-size: 20px; margin-top: 36px; color: #0052CC; }
+  ul { padding-left: 24px; }
+  a { color: #0052CC; }
+  .todo { background: #FFF0B3; padding: 1px 4px; border-radius: 3px; }
+</style>
+</head>
+<body>
+
+<h1>Security Policy</h1>
+<p class="updated">Last updated: <span class="todo">11/08/2026</span></p>
+
+<h2>Platform security</h2>
+<p>Teams Digest for Jira is built entirely on Atlassian's Forge platform. We do not operate any separate servers, databases, or infrastructure outside of Forge. Application code runs inside Atlassian's own sandboxed runtime, and all persisted configuration data is stored using Forge's built-in Key-Value Store, isolated per installation.</p>
+
+<h2>Authentication</h2>
+<p>The app authenticates to Jira using Forge's built-in app identity (<code>asApp()</code>). We never request, collect, or store Atlassian Personal Access Tokens, account passwords, or any other shared secrets from end users.</p>
+
+<h2>Outbound data transmission</h2>
+<p>The app transmits Jira issue summary data to a Microsoft Teams Workflow webhook URL that the administrator explicitly configures. This is a core, requested function of the app — data is sent only to the destination the customer specifies, over HTTPS.</p>
+
+<h2>Least-privilege permissions</h2>
+<p>The app requests the minimum Jira API scopes required to function: read-only access to issues (<code>read:jira-work</code>) and app-scoped storage (<code>storage:app</code>). It does not request write access to your Jira data.</p>
+
+<h2>Vulnerability reporting</h2>
+<p>If you believe you've found a security issue in this app, please report it to
+<a href="mailto:support@teamsdigestforjira.com">support@teamsdigestforjira.com</a>. We will acknowledge reports within 2 business days and work to address confirmed issues promptly.</p>
+
+<h2>Incident response</h2>
+<p>In the event of a confirmed security incident affecting customer data, we will notify affected administrators via the contact information on file as soon as reasonably possible, and no later than required by applicable law.</p>
+
+<p><a href="index.html">← Back</a></p>
+
+</body>
+</html>
